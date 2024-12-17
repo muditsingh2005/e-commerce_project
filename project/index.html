@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="app.js" defer></script>
+    <title>SHOP.CO</title>
+</head>
+
+<body>
+    <nav id="sidebar">
+        <ul>
+
+            <li>
+                <span class="logo">SHOP.CO</span>
+                <button onclick=toggleSidebar() id="toggle-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#5f6368">
+                        <path
+                            d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z" />
+                    </svg>
+                </button>
+            </li>
+
+            <li class="active">
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#5f6368">
+                        <path
+                            d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
+                    </svg>
+                    <span>Home</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="dashboard.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#5f6368">
+                        <path
+                            d="M841-518v318q0 33-23.5 56.5T761-120H201q-33 0-56.5-23.5T121-200v-318q-23-21-35.5-54t-.5-72l42-136q8-26 28.5-43t47.5-17h556q27 0 47 16.5t29 43.5l42 136q12 39-.5 71T841-518Zm-272-42q27 0 41-18.5t11-41.5l-22-140h-78v148q0 21 14 36.5t34 15.5Zm-180 0q23 0 37.5-15.5T441-612v-148h-78l-22 140q-4 24 10.5 42t37.5 18Zm-178 0q18 0 31.5-13t16.5-33l22-154h-78l-40 134q-6 20 6.5 43t41.5 23Zm540 0q29 0 42-23t6-43l-42-134h-76l22 154q3 20 16.5 33t31.5 13ZM201-200h560v-282q-5 2-6.5 2H751q-27 0-47.5-9T663-518q-18 18-41 28t-49 10q-27 0-50.5-10T481-518q-17 18-39.5 28T393-480q-29 0-52.5-10T299-518q-21 21-41.5 29.5T211-480h-4.5q-2.5 0-5.5-2v282Zm560 0H201h560Z" />
+                    </svg>
+
+                
+                    <span>Shop</span>
+                </a>
+            </li>
+
+            <li>
+
+                <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#5f6368">
+                        <path
+                            d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v240H160v240h400v80H160Zm0-480h640v-80H160v80ZM760-80v-120H640v-80h120v-120h80v120h120v80H840v120h-80ZM160-240v-480 480Z" />
+                    </svg>
+
+                    <span>On-Sale</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#5f6368">
+                        <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+                    </svg>
+                </button>
+
+                <ul class="sub-menu ">
+                    <div>
+                        <li><a href="#">Mens</a></li>
+                        <li><a href="#">Womens</a></li>
+                        <li><a href="#">Kids</a></li>
+                    </div>
+
+                </ul>
+
+            </li>
+
+            <li>
+                <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#5f6368">
+                        <path
+                            d="M400-280h360v-240H400v240ZM160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-480H160v480Zm0 0v-480 480Z" />
+                    </svg>
+                    <span>Brands</span>
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#5f6368">
+                        <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+                    </svg>
+                </button>
+
+                <ul class="sub-menu ">
+                    <div>
+                        <li><a href="#">H&M</a></li>
+                        <li><a href="#">Zara</a></li>
+                        <li><a href="#">Adidas</a></li>
+                        <li><a href="#">Lee Copper</a></li>
+                        <li><a href="#">See-All...</a></li>
+                    </div>
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="calendar.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#5f6368">
+                        <path
+                            d="m344-60-76-128-144-32 14-148-98-112 98-112-14-148 144-32 76-128 136 58 136-58 76 128 144 32-14 148 98 112-98 112 14 148-144 32-76 128-136-58-136 58Zm34-102 102-44 104 44 56-96 110-26-10-112 74-84-74-86 10-112-110-24-58-96-102 44-104-44-56 96-110 24 10 112-74 86 74 84-10 114 110 24 58 96Zm102-318Zm-42 142 226-226-56-58-170 170-86-84-56 56 142 142Z" />
+                    </svg>
+            
+                    <span>New Arrivals</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="profile.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#5f6368">
+                        <path
+                            d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z" />
+                    </svg>
+                    <span>Profile</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="cart.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#5f6368">
+                        <path
+                            d="m480-560-56-56 63-64H320v-80h167l-64-64 57-56 160 160-160 160ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z" />
+                    </svg>
+                    <span>checkout</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    <main>
+
+        <div class="search-palce">
+            <div class="input-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here..." />
+                <button class="button">Search</button>
+            </div>
+        </div>
+
+        <div class="hero-section">
+            <div class="image-plate">
+                <img src="New folder/heroimage.png" alt="">
+            </div>
+        </div>
+
+        <div class="brand-section">
+            <img src="New folder/Group (1).png" alt="">
+            <img src="New folder/Group.png" alt="">
+            <img src="New folder/gucci-logo-1 1.png" alt="">
+            <img src="New folder/prada-logo-1 1.png" alt="">
+            <img src="New folder/zara-logo-1 1.png" alt="">
+
+        </div>
+
+        <div class="container">
+
+            <div class="container-intro">NEW ARRIVALS</div>
+
+            <div class="product-details">
+                <div class="template">
+                    <img src="New folder/Frame 32.png" alt="">
+                    <span>T-shirt with Tape Detail</span>
+                    <div>$120</div>
+                </div>
+
+                <div class="template">
+                    <img src="New folder/Frame 33.png" alt="">
+                    <span>Skinny Fit jeans</span>
+                    <div>$120</div>
+                </div>
+
+                <div class="template">
+                    <img src="New folder/Frame 34.png" alt="">
+                    <span>Checkered Shirt</span>
+                    <div>$120</div>
+                </div>
+
+                <div class="template">
+                    <img src="New folder/Frame 38.png" alt="">
+                    <span>Sleev Striped T-shirt</span>
+                    <div>$120</div>
+                </div>
+            </div>
+
+            <div class="view-all">
+                <div class="view-btn">
+                    <button>view all</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+
+            <div class="container-intro">NEW ARRIVALS</div>
+
+            <div class="product-details">
+                <div class="template">
+                    <img src="New folder/Frame 1.png" alt="">
+                    <span>Vertical Striped Shirt</span>
+                    <div>$120</div>
+                </div>
+
+                <div class="template">
+                    <img src="New folder/Frame 2.png" alt="">
+                    <span>Courage Graphic T-shirt</span>
+                    <div>$120</div>
+                </div>
+
+                <div class="template">
+                    <img src="New folder/Frame 3.png" alt="">
+                    <span>Loose Fit Bermuda</span>
+                    <div>$120</div>
+                </div>
+
+                <div class="template">
+                    <img src="New folder/Frame 4.png" alt="">
+                    <span>Faded Skinny Jeans</span>
+                    <div>$120</div>
+                </div>
+            </div>
+
+            <div class="view-all">
+                <div class="view-btn">
+                    <button>view all</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-dress-style">
+            <img src="New folder/Frame 60.png" alt="">
+        </div>
+
+
+
+
+
+        <section class="footer">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>Info</h4>
+                    <ul class="links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Compressions</a></li>
+                        <li><a href="#">Customers</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Collection</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul class="links">
+                        <li><a href="#">Free Designs</a></li>
+                        <li><a href="#">Latest Designs</a></li>
+                        <li><a href="#">Themes</a></li>
+                        <li><a href="#">Popular Designs</a></li>
+                        <li><a href="#">Art Skills</a></li>
+                        <li><a href="#">New Uploads</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul class="links">
+                        <li><a href="#">Customer Agreement</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">GDPR</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Media Kit</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>SHOP.CO</h4>
+                    <p>
+                        Visit to our Store for a weekly dose
+                        of Faishon, trends, Cool styles, and
+                        exclusive offers.
+                    </p>
+                    <form action="#">
+                        <input type="text" placeholder="Your email" required>
+                        <button type="submit">SUBSCRIBE</button>
+                    </form>
+        
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
